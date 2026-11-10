@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --color-tsc-red: #cc0000;
+  --color-tsc-darkred: #a80000;
+  --color-tsc-black: #111827;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom barcode stripes generator for the visual voucher pass */
+.barcode-pattern {
+  background: repeating-linear-gradient(
+    90deg,
+    #111827,
+    #111827 3px,
+    transparent 3px,
+    transparent 6px,
+    #111827 6px,
+    #111827 8px,
+    transparent 8px,
+    transparent 11px,
+    #111827 11px,
+    #111827 15px,
+    transparent 15px,
+    transparent 17px,
+    #111827 17px,
+    #111827 19px,
+    transparent 19px,
+    transparent 23px,
+    #111827 23px,
+    #111827 27px,
+    transparent 27px,
+    transparent 29px
+  );
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Tractor Supply Co $750 Reward Promo",
+  "description": "Interactive promotional claim experience and deal completion funnel for the $750 Tractor Supply Co sweepstakes & rewards offer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

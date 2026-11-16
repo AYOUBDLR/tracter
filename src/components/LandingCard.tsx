@@ -3,10 +3,12 @@ import { ArrowRight, CheckCircle2, ShieldCheck, Clock } from 'lucide-react';
 import { TscLogo } from './TscLogo';
 
 interface LandingCardProps {
-  onStart: () => void;
+  onStart?: () => void;
 }
 
-export const LandingCard: React.FC<LandingCardProps> = ({ onStart }) => {
+const OFFER_REDIRECT_URL = 'https://giftclick.org/?offer_id=5488&aff_id=144361';
+
+export const LandingCard: React.FC<LandingCardProps> = () => {
   // Live dynamic claimed count with occasional realistic tick
   const [claimedCount, setClaimedCount] = useState(786);
 
@@ -43,7 +45,7 @@ export const LandingCard: React.FC<LandingCardProps> = ({ onStart }) => {
         {/* Headline (Styled with huge accent text like image 1) */}
         <div className="text-center mb-8">
           <p className="text-lg sm:text-xl font-medium text-slate-600 mb-1">
-            Get up to a
+            Have a chance to get up to a
           </p>
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-slate-900">
             <span className="text-[#CC0000] italic font-black mr-2 drop-shadow-xs">$750</span>
@@ -114,15 +116,16 @@ export const LandingCard: React.FC<LandingCardProps> = ({ onStart }) => {
           </div>
         </div>
 
-        {/* Primary Action Button (Matching large pill button in image 1) */}
+        {/* Primary Action Link (Redirects to offer URL) */}
         <div className="mb-6">
-          <button
-            onClick={onStart}
-            className="w-full py-4 px-6 rounded-full bg-[#CC0000] hover:bg-[#a80000] active:scale-[0.99] text-white text-lg font-bold flex items-center justify-center gap-2.5 shadow-lg shadow-red-600/30 transition-all cursor-pointer group"
+          <a
+            href={OFFER_REDIRECT_URL}
+            rel="noopener noreferrer"
+            className="w-full py-4 px-6 rounded-full bg-[#CC0000] hover:bg-[#a80000] active:scale-[0.99] text-white text-lg font-bold flex items-center justify-center gap-2.5 shadow-lg shadow-red-600/30 transition-all cursor-pointer group no-underline"
           >
             <span>Start promotion</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
 
         {/* Trust & Verification Badges */}

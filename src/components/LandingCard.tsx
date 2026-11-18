@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, CheckCircle2, ShieldCheck, Clock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { TscLogo } from './TscLogo';
 
 interface LandingCardProps {
@@ -117,7 +117,7 @@ export const LandingCard: React.FC<LandingCardProps> = () => {
         </div>
 
         {/* Primary Action Link (Redirects to offer URL) */}
-        <div className="mb-6">
+        <div>
           <a
             href={OFFER_REDIRECT_URL}
             rel="noopener noreferrer"
@@ -126,22 +126,6 @@ export const LandingCard: React.FC<LandingCardProps> = () => {
             <span>Start promotion</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
-        </div>
-
-        {/* Trust & Verification Badges */}
-        <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between text-xs text-slate-500 gap-2">
-          <div className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-emerald-600" />
-            <span>256-bit Secure Verification</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <Clock className="w-4 h-4 text-amber-600" />
-            <span>Limited Daily Codes</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-[#CC0000]" />
-            <span>No Purchase Obligation</span>
-          </div>
         </div>
       </div>
     </div>
